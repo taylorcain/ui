@@ -12,7 +12,7 @@ export default function SiteHeader({ isDark = false }: { isDark?: boolean }) {
       </Link>
       <div className="flex items-center gap-2">
         <a
-          href="https://github.com/genesis-ui-dev"
+          href="https://github.com/taylorcain/ui"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="UI Library on GitHub"
