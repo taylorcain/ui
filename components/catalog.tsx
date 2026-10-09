@@ -121,15 +121,14 @@ export default function Catalog({ view }: { view: "components" | "icons" }) {
       <div className="flex h-14 items-center gap-3 pr-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          viewBox="0 0 24 24"
           strokeWidth={1.5}
-          strokeMiterlimit={10}
+          stroke="currentColor"
           className="size-5 shrink-0 text-black dark:text-white"
           aria-hidden
         >
-          <path d="M18.8 11.28a7.52 7.52 0 1 1-15.04 0 7.52 7.52 0 0 1 15.04 0M16.6 16.6 20.56 20.56" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M16.42 5.1c3.12 3.12 3.12 8.19 0 11.31-1.56 1.57-3.61 2.34-5.66 2.34s-4.1-.78-5.66-2.34c-3.12-3.12-3.12-8.19 0-11.31s8.19-3.12 11.31 0ZM21.27 21.27l-4.85-4.85" />
         </svg>
         <label className="sr-only" htmlFor="catalog-search">
           Search
@@ -153,7 +152,7 @@ export default function Catalog({ view }: { view: "components" | "icons" }) {
                 <div className="relative h-[220px] overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a]">
                   <CardPreview slug={item.slug} />
                 </div>
-                <p className="mt-3 text-sm font-medium text-black/45 transition-colors group-hover/card:text-black/75 dark:text-white/45 dark:group-hover/card:text-white/75">
+                <p className="mt-3 text-sm font-medium text-black/45 transition-colors group-hover/card:text-black dark:text-white/45 dark:group-hover/card:text-white">
                   {item.name}
                 </p>
               </Link>

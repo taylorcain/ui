@@ -5,13 +5,14 @@ import { useRef, useState } from "react";
 type Ripple = { id: number; x: number; y: number };
 
 const baseClassName =
-  "btn-scale relative inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full p-2 text-black transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/10";
+  "btn-scale relative inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full text-black transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/10";
 
 export default function RippleIconButton({
   children,
   ariaLabel,
-  className = "",
+  className = "p-2",
   href,
+  external = true,
   onClick,
   type = "button",
 }: {
@@ -19,6 +20,7 @@ export default function RippleIconButton({
   ariaLabel: string;
   className?: string;
   href?: string;
+  external?: boolean;
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   type?: "button" | "submit" | "reset";
 }) {
@@ -51,8 +53,9 @@ export default function RippleIconButton({
       <a
         ref={btnRef as React.RefObject<HTMLAnchorElement>}
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(external
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
         aria-label={ariaLabel}
         onClick={(event) => {
           addRipple(event);

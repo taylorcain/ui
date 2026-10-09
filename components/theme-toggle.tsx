@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const SunIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12,3v2.25M18.36,5.64l-1.59,1.59M21,12h-2.25M18.36,18.36l-1.59-1.59M12,18.75v2.25M7.23,16.77l-1.59,1.59M5.25,12h-2.25M7.23,7.23l-1.59-1.59M16.5,12c0,2.49-2.01,4.5-4.5,4.5s-4.5-2.01-4.5-4.5,2.01-4.5,4.5-4.5,4.5,2.01,4.5,4.5Z" />
   </svg>
 );
 
@@ -35,11 +35,9 @@ export default function ThemeToggle({ initialDark = false }: { initialDark?: boo
       type="button"
       onClick={toggleDarkMode}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="cursor-pointer text-black/60 transition-all duration-300 hover:scale-90 hover:text-black dark:text-white/60 dark:hover:text-white"
+      className="cursor-pointer p-2 text-black transition-all duration-300 hover:scale-90 dark:text-white"
     >
-      <span className="flex items-center justify-center p-2" aria-hidden>
-        {isDark ? <MoonIcon /> : <SunIcon />}
-      </span>
+      {isDark ? <MoonIcon /> : <SunIcon />}
     </button>
   );
 }
