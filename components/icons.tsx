@@ -1046,6 +1046,20 @@ const Icons: FC<IconsProps> = ({
       name: 'command-line',
       renderedicon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4.78,6.94l6.74,5.06-6.74,5.06M11.91,17.06h7.31"/>
+        </svg>
+      ),
+      svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.78,6.94l6.74,5.06-6.74,5.06M11.91,17.06h7.31"/>
+            </svg>`,
+      jsx: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.78,6.94l6.74,5.06-6.74,5.06M11.91,17.06h7.31"/>
+            </svg>`,
+    },
+    {
+      name: 'command-line-2',
+      renderedicon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M5.25,20.25h13.5c1.24,0,2.25-1.01,2.25-2.25V6c0-1.24-1.01-2.25-2.25-2.25H5.25c-1.24,0-2.25,1.01-2.25,2.25v12c0,1.24,1.01,2.25,2.25,2.25ZM7.43,9.26l3.65,2.74-3.65,2.74M12.91,14.74h3.65"/>
         </svg>
       ),
@@ -2104,6 +2118,23 @@ const Icons: FC<IconsProps> = ({
     },
     {
       name: 'user',
+      renderedicon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+          <circle cx="12" cy="9.57" r="5.09" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.82,19.52c-1.43-2.88-4.38-4.87-7.82-4.87s-6.39,1.99-7.82,4.87"/>
+        </svg>
+      ),
+      svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <circle cx="12" cy="9.57" r="5.09"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.82,19.52c-1.43-2.88-4.38-4.87-7.82-4.87s-6.39,1.99-7.82,4.87"/>
+            </svg>`,
+      jsx: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <circle cx="12" cy="9.57" r="5.09" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.82,19.52c-1.43-2.88-4.38-4.87-7.82-4.87s-6.39,1.99-7.82,4.87"/>
+            </svg>`,
+    },
+    {
+      name: 'user-2',
       renderedicon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75,6.37c0,2.07-1.68,3.75-3.75,3.75s-3.75-1.68-3.75-3.75,1.68-3.75,3.75-3.75,3.75,1.68,3.75,3.75ZM4.5,19.75c.07-4.14,3.48-7.44,7.62-7.38,4.05.07,7.31,3.33,7.38,7.38-2.35,1.08-4.91,1.64-7.5,1.63-2.68,0-5.22-.58-7.5-1.63Z"/>

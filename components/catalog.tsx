@@ -5,6 +5,7 @@ import { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
 import ContentSheet from "@/components/content-sheet";
 import Icons from "@/components/icons";
 import { CardPreview } from "@/components/previews";
+import RippleIconButton from "@/components/ripple-icon-button";
 import { components } from "@/lib/components";
 
 type CatalogView = "components" | "icons";
@@ -102,6 +103,9 @@ function ViewToggle({ view }: { view: CatalogView }) {
 
 export default function Catalog({ view }: { view: "components" | "icons" }) {
   const [query, setQuery] = useState("");
+  const [clearing, setClearing] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
+  const clearHideRef = useRef<number>(0);
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -134,13 +138,39 @@ export default function Catalog({ view }: { view: "components" | "icons" }) {
           Search
         </label>
         <input
+          ref={searchRef}
           id="catalog-search"
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search"
-          className="font-geist-medium h-full min-w-0 flex-1 bg-transparent text-sm leading-5 text-black outline-none placeholder:font-geist-medium placeholder:text-sm placeholder:leading-5 placeholder:text-black dark:text-white dark:placeholder:text-white"
+          className="font-geist-medium h-full min-w-0 flex-1 bg-transparent text-sm leading-5 text-black outline-none placeholder:font-geist-medium placeholder:text-sm placeholder:leading-5 placeholder:text-black [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none dark:text-white dark:placeholder:text-white"
         />
+        {query || clearing ? (
+          <RippleIconButton
+            ariaLabel="Clear search"
+            className="shrink-0 px-5 py-2 hover:bg-black/[0.06] dark:hover:bg-white/[0.10]"
+            onClick={() => {
+              setClearing(true);
+              setQuery("");
+              searchRef.current?.focus();
+              window.clearTimeout(clearHideRef.current);
+              clearHideRef.current = window.setTimeout(() => setClearing(false), 560);
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5"
+              aria-hidden
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5.7,18.3l12.6-12.6M5.7,5.7l12.6,12.6" />
+            </svg>
+          </RippleIconButton>
+        ) : null}
         <ViewToggle view={view} />
       </div>
 
