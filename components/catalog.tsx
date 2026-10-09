@@ -91,7 +91,7 @@ function ViewToggle({ view }: { view: CatalogView }) {
           }}
           aria-current={view === tab.id ? "page" : undefined}
           onMouseEnter={() => setHovered(tab.id)}
-          className="relative z-10 rounded-full px-5 py-2 text-sm font-medium text-black dark:text-white"
+          className="font-geist-medium relative z-10 rounded-full px-5 py-2 text-sm text-black dark:text-white"
         >
           {tab.label}
         </Link>
@@ -139,7 +139,7 @@ export default function Catalog({ view }: { view: "components" | "icons" }) {
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search"
-          className="h-full min-w-0 flex-1 bg-transparent text-sm leading-5 font-medium text-black outline-none placeholder:text-sm placeholder:leading-5 placeholder:font-medium placeholder:text-black dark:text-white dark:placeholder:text-white"
+          className="font-geist-medium h-full min-w-0 flex-1 bg-transparent text-sm leading-5 text-black outline-none placeholder:font-geist-medium placeholder:text-sm placeholder:leading-5 placeholder:text-black dark:text-white dark:placeholder:text-white"
         />
         <ViewToggle view={view} />
       </div>
@@ -152,7 +152,7 @@ export default function Catalog({ view }: { view: "components" | "icons" }) {
                 <div className="relative h-[220px] overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a]">
                   <CardPreview slug={item.slug} />
                 </div>
-                <p className="mt-3 text-sm font-medium text-black/45 transition-colors group-hover/card:text-black dark:text-white/45 dark:group-hover/card:text-white">
+                <p className="font-geist-medium mt-3 text-sm text-black/45 transition-colors group-hover/card:text-black dark:text-white/45 dark:group-hover/card:text-white">
                   {item.name}
                 </p>
               </Link>

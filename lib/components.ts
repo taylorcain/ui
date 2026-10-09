@@ -24,16 +24,34 @@ export const components = [
     usagePath: "components/ui/checkbox-usage.tsx",
   },
   {
-    slug: "input",
-    name: "Input",
+    slug: "input-pill",
+    name: "Input Pill",
     codePath: "components/ui/input.tsx",
     usagePath: "components/ui/input-usage.tsx",
+  },
+  {
+    slug: "input-line",
+    name: "Input Line",
+    codePath: "components/ui/input-line.tsx",
+    usagePath: "components/ui/input-line-usage.tsx",
   },
   {
     slug: "radio-group",
     name: "Radio Group",
     codePath: "components/ui/radio-group.tsx",
     usagePath: "components/ui/radio-group-usage.tsx",
+  },
+  {
+    slug: "switch",
+    name: "Switch",
+    codePath: "components/ui/switch.tsx",
+    usagePath: "components/ui/switch-usage.tsx",
+  },
+  {
+    slug: "switch-2",
+    name: "Switch 2",
+    codePath: "components/ui/switch-2.tsx",
+    usagePath: "components/ui/switch-2-usage.tsx",
   },
   {
     slug: "tabs",

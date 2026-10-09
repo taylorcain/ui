@@ -10,8 +10,13 @@ import ButtonRippleUsage from "@/components/ui/button-ripple-usage";
 import Checkbox from "@/components/ui/checkbox";
 import CheckboxUsage from "@/components/ui/checkbox-usage";
 import InputUsage from "@/components/ui/input-usage";
+import InputLineUsage from "@/components/ui/input-line-usage";
 import RadioGroup from "@/components/ui/radio-group";
 import RadioGroupUsage from "@/components/ui/radio-group-usage";
+import Switch from "@/components/ui/switch";
+import SwitchUsage from "@/components/ui/switch-usage";
+import Switch2 from "@/components/ui/switch-2";
+import Switch2Usage from "@/components/ui/switch-2-usage";
 import Tabs from "@/components/ui/tabs";
 import TabsUsage from "@/components/ui/tabs-usage";
 import TextareaUsage from "@/components/ui/textarea-usage";
@@ -147,11 +152,19 @@ export function CardPreview({ slug }: { slug: ComponentSlug }) {
           <Checkbox />
         </CardCenter>
       );
-    case "input":
+    case "input-pill":
       return (
         <CardCenter>
           <div className="w-[250px]">
             <InputUsage />
+          </div>
+        </CardCenter>
+      );
+    case "input-line":
+      return (
+        <CardCenter>
+          <div className="w-[250px]">
+            <InputLineUsage />
           </div>
         </CardCenter>
       );
@@ -160,6 +173,18 @@ export function CardPreview({ slug }: { slug: ComponentSlug }) {
         <CardStage width={520} scale={0.58}>
           <RadioGroup options={["Option 1", "Option 2", "Option 3"]} />
         </CardStage>
+      );
+    case "switch":
+      return (
+        <CardCenter>
+          <Switch />
+        </CardCenter>
+      );
+    case "switch-2":
+      return (
+        <CardCenter>
+          <Switch2 />
+        </CardCenter>
       );
     case "tabs":
       return (
@@ -214,11 +239,19 @@ export function DocPreview({
           <CheckboxUsage />
         </Panel>
       );
-    case "input":
+    case "input-pill":
       return (
         <Panel center openHref={openHref}>
           <div className="mx-auto max-w-[400px]">
             <InputUsage />
+          </div>
+        </Panel>
+      );
+    case "input-line":
+      return (
+        <Panel center openHref={openHref}>
+          <div className="mx-auto max-w-[400px]">
+            <InputLineUsage />
           </div>
         </Panel>
       );
@@ -228,6 +261,18 @@ export function DocPreview({
           <div className="mx-auto max-w-[640px]">
             <RadioGroupUsage />
           </div>
+        </Panel>
+      );
+    case "switch":
+      return (
+        <Panel center openHref={openHref}>
+          <SwitchUsage />
+        </Panel>
+      );
+    case "switch-2":
+      return (
+        <Panel center openHref={openHref}>
+          <Switch2Usage />
         </Panel>
       );
     case "tabs":
