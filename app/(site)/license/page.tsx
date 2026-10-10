@@ -4,14 +4,14 @@ import LegalToggle from "@/components/legal-toggle";
 
 export const metadata: Metadata = {
   title: "License",
-  description: "UI Library is open source software licensed under the MIT License.",
+  description: "Colosso UI is open source software licensed under the MIT License.",
 };
 
 export default function LicensePage() {
   return (
     <div className="flex flex-1 flex-col">
       <div className="mx-auto w-full max-w-[1120px] px-6 pt-14 pb-8 sm:pt-16 sm:pb-10">
-        <h1 className="text-center text-[1.7rem] leading-[1.12] font-medium tracking-[-0.05em] text-black sm:text-[2.5rem] dark:text-white">
+        <h1 className="text-center text-[1.7rem] leading-[1.12] tracking-[-0.05em] text-black sm:text-[2.5rem] dark:text-white">
           License
         </h1>
       </div>

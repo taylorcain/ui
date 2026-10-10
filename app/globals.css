@@ -4,37 +4,38 @@
 
 @theme inline {
   --color-charcoal: #1a1a1a;
+  --font-sans: "SuisseIntl-Regular", Helvetica, sans-serif;
 }
 
 @font-face {
-  font-family: "Geist-Medium";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: normal;
-  src: url("/assets/fonts/Geist-Medium.woff2");
+  src: url("/assets/fonts/SuisseIntl-Regular.woff2");
 }
 
 @font-face {
-  font-family: "Geist-Regular";
+  font-family: "SuisseIntl-Medium";
   font-style: normal;
   font-weight: normal;
-  src: url("/assets/fonts/Geist-Regular.woff2");
+  src: url("/assets/fonts/SuisseIntl-Medium.woff2");
 }
 
 .font-geist-medium {
-  font-family: "Geist-Medium", Helvetica, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 body {
+  font-family: "SuisseIntl-Regular", Helvetica, sans-serif;
   background-color: #fff;
   background-image: radial-gradient(rgba(0, 0, 0, 0.14) 0.5px, transparent 0.5px);
   background-size: 12px 12px;
   color: #171717;
-  font-family: "Geist-Regular", Helvetica, sans-serif;
-  font-feature-settings: "ss01" 1;
 }
 
 .dark body {
-  background-color: #1a1a1a;
+  background-color: #151515;
   background-image: radial-gradient(rgba(255, 255, 255, 0.09) 0.5px, transparent 0.5px);
   color: #fff;
 }

@@ -1,21 +1,42 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/theme-toggle";
 
+function ColossoMark({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 440 440"
+      className={className}
+      aria-hidden
+    >
+      <rect
+        width="440"
+        height="440"
+        rx="120"
+        ry="120"
+        className="fill-[#4d4dff] dark:fill-[#efeee4]"
+      />
+      <path
+        className="fill-[#efeee4] dark:fill-[#4d4dff]"
+        d="M323.81,250.66c-15.25,32.68-54.1,55.98-99.53,55.98-58.69,0-106.44-38.87-106.44-86.64s47.75-86.64,106.44-86.64c45.43,0,84.29,23.3,99.53,55.98l39.72-12.23c-20.41-49.55-75.12-85.11-139.25-85.11-81.49,0-147.8,57.42-147.8,128s66.3,128,147.8,128c64.13,0,118.84-35.56,139.25-85.11l-39.72-12.23Z"
+      />
+    </svg>
+  );
+}
+
 export default function SiteHeader({ isDark = false }: { isDark?: boolean }) {
   return (
     <header className="mx-auto flex w-full max-w-[1120px] items-center justify-between px-6 py-5">
-      <Link href="/" className="font-geist-medium flex items-center gap-2 text-black dark:text-white">
-        <span className="flex size-7 items-center justify-center rounded-[9px] bg-black text-[1.125rem] leading-none tracking-normal text-white dark:bg-white dark:text-black">
-          UI
-        </span>
-        <span className="text-[1.125rem] leading-none tracking-[-0.03em]">Library</span>
+      <Link href="/" className="flex items-center gap-2 text-black dark:text-white">
+        <ColossoMark className="size-7" />
+        <span className="text-[1.125rem] leading-none tracking-[-0.03em]">Colosso UI</span>
       </Link>
       <div className="flex items-center gap-2">
         <a
           href="https://github.com/taylorcain/ui"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="UI Library on GitHub"
+          aria-label="Colosso UI on GitHub"
           className="cursor-pointer p-2 text-black transition-all duration-300 hover:scale-90 dark:text-white"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
